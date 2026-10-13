@@ -3,7 +3,6 @@
 
 Ứng dụng web mô phỏng các thuật toán lập lịch CPU trong môn Nguyên lý Hệ điều hành, xây dựng bằng **HTML + CSS + JavaScript + Bootstrap 5**. Mỗi thuật toán nằm trong **một file riêng**, các thành viên chỉ cần vào đúng file thuật toán của mình để hoàn thiện.
 
-> 📌 Sửa lại tên dự án và danh sách thuật toán cho phù hợp với đề tài của nhóm.
 
 ---
 
