@@ -1,0 +1,71 @@
+body {
+  background-color: #f8f9fa;
+}
+
+#gantt-chart {
+  display: flex;
+  height: 60px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  overflow: visible;
+  position: relative;
+  margin-top: 20px;
+}
+
+/* Định nghĩa hiệu ứng mọc dài ra từ bên trái */
+@keyframes expandBlock {
+  from { transform: scaleX(0); opacity: 0; }
+  to { transform: scaleX(1); opacity: 1; }
+}
+
+/* Định nghĩa hiệu ứng rơi xuống cho con số thời gian */
+@keyframes dropTime {
+  from { transform: translateY(-15px) translateX(50%); opacity: 0; }
+  to { transform: translateY(0) translateX(50%); opacity: 1; }
+}
+
+.gantt-block {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #343a40;
+  font-weight: bold;
+  
+  /* Thêm hiệu ứng chuyển động */
+  transform-origin: left center;
+  animation: expandBlock 0.8s ease-out forwards;
+}
+
+.gantt-process {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.gantt-idle {
+  background-color: #e9ecef;
+  color: #6c757d;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #dee2e6 10px, #dee2e6 20px);
+}
+
+.time-marker {
+  position: absolute;
+  bottom: -25px;
+  font-size: 0.85rem;
+  color: #000;
+  font-weight: bold;
+}
+
+.time-marker.start {
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.time-marker.end {
+  right: 0;
+  
+  /* Ẩn con số chờ khối chạy xong mới rơi xuống */
+  opacity: 0;
+  animation: dropTime 0.4s ease-out 0.6s forwards;
+}
