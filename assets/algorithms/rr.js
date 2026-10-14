@@ -3,7 +3,7 @@
 
 export default {
     id: "rr",
-    name: "Round Robin (RR)",
+    name: "RR",
     description:
         "Mỗi tiến trình được sử dụng CPU trong tối đa một khoảng quantum. Nếu chưa hoàn thành, tiến trình được đưa về cuối hàng đợi.",
     needQuantum: true,
